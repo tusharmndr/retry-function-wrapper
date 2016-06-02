@@ -7,7 +7,7 @@ This is a simple helper library to retry any function. This library compiles onl
 ```java
 
       int MAX_RETRY = 3;
-      RetryUtil.retry(MAX_RETRY,
+      RetryUtil.<Boolean>retry(MAX_RETRY,
           () -> {
                     //Function to retry
                     return true;

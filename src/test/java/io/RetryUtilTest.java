@@ -17,7 +17,7 @@ public class RetryUtilTest {
 
     @Test
     public void testWithoutFailure() throws Exception {
-        Assert.assertTrue(RetryUtil.retry(3, () -> true));
+        Assert.assertTrue(RetryUtil.<Boolean>retry(3, () -> true));
     }
 
     @Test(expected = IllegalArgumentException.class)
